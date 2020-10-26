@@ -32,7 +32,7 @@ class Post(models.Model):
     content = QuillField()
     author = models.ForeignKey(User, on_delete=models.PROTECT)
     tags = models.ManyToManyField(Tag)
-    slug = models.SlugField(max_length=20, default="", editable=False)
+    slug = models.SlugField(max_length=20, default="", editable=False, unique=True)
 
     @classmethod
     def _get_slug(cls, title):
@@ -51,6 +51,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ("-datetime", "title")
 
 
 class Comment(models.Model):

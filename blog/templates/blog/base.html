@@ -1,0 +1,26 @@
+{% extends 'base_site.html' %}
+
+{% block body %}
+
+    <!-- preloader
+   ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        {% include 'blog/modules/header.html' %}
+
+        {% block content %}{% endblock %}
+
+        {% include 'blog/modules/footer.html' %}
+
+    </div> <!-- end s-wrap -->
+
+
+{% endblock %}
