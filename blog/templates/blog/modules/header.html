@@ -1,4 +1,4 @@
-{% load static %}
+{% load static blog_categories %}
 
 <!-- site header
 ================================================== -->
@@ -35,16 +35,11 @@
     <nav class="header__nav-wrap">
 
         <ul class="header__nav">
-            <li class="current"><a href="index.html" title="">Home</a></li>
+            <li class="current"><a href="{% url 'homepage' %}" title="">Home</a></li>
             <li class="has-children">
                 <a href="#0" title="">Categories</a>
                 <ul class="sub-menu">
-                    <li><a href="category.html">Lifestyle</a></li>
-                    <li><a href="category.html">Health</a></li>
-                    <li><a href="category.html">Family</a></li>
-                    <li><a href="category.html">Management</a></li>
-                    <li><a href="category.html">Travel</a></li>
-                    <li><a href="category.html">Work</a></li>
+                    {% categories %}
                 </ul>
             </li>
             <li><a href="page-about.html" title="">About</a></li>

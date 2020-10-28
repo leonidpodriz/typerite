@@ -1,8 +1,12 @@
-{% extends 'blog/base.html' %}
+{% extends "blog/base.html" %}
 
 {% block content %}
 
     <div class="s-content">
+
+        <header class="listing-header">
+            <h1 class="h2">Category: {{ category_name }}</h1>
+        </header>
 
         <div class="masonry-wrap">
 
@@ -11,6 +15,7 @@
                 <div class="grid-sizer"></div>
 
                 {% for object in object_list %}
+
                     <article class="masonry__brick entry format-standard animate-this">
 
                         <div class="entry__thumb">
@@ -42,6 +47,7 @@
                         </div>
 
                     </article> <!-- end article -->
+
                 {% endfor %}
 
 

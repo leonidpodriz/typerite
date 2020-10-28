@@ -23,7 +23,7 @@
                         <li class="date">{{ object.datetime|date:'F j, Y' }}</li>
                         <li class="cat-links">
                             {% for category in object.categories.all %}
-                                <a href="#">{{ category.name }}</a>
+                                <a href="{% url 'category_page' category.slug %}">{{ category.name }}</a>
                             {% endfor %}
                         </li>
                     </ul>
