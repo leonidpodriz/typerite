@@ -4,3 +4,4 @@ django-quill-editor==0.1.16
 Pillow==8.0.0
 pytz==2020.1
 sqlparse==0.4.1
+gunicorn==20.0.4
